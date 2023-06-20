@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bkg-color: #EFF1FF;
+  --rose-color: #FEEAFA;
+  --bkg-title-color: #CBC0D3;
+  --bkg-header-color: #8E9AAF;
+  --dark-color: #4A4E69;
+
+  --ff-title: 'Staatliches', cursive;
+  --ff-primary: 'Palanquin', sans-serif;
+
+  font-size: 62.5%;
+  --fs-principal: 1.6rem;
+}
+
+body{
+  background-color: #EFF1FF;
+  font-size: var(--fs-principal);
+}
+
+#page{
+  max-width: 49.4rem;
+
+  display: grid;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+header{
+  background-color: var(--bkg-header-color);
+
+  width: 100%;
+  /* height: 27.9rem; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 0 2.9rem;
+}
+
+header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 13.7rem;
+  height: 13.7rem; */
+
+  padding: 3.2rem 0;
+
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+
+  animation: rotateleft 700ms ease;
+}
+
+/* header .logo img{
+  width: 100%;
+  height: 100%;
+} */
+
+header h1{
+  background-color: var(--bkg-title-color);
+
+  width: 100%;
+  padding: 8px 0;
+
+  text-align: center;
+  color: var(--rose-color);
+
+  font-family: var(--ff-title);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 4px;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6.3rem;
+
+  padding: 1.6rem 0 6rem;
+}
+
+.wrapper .paragrafo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 31.5rem;
+
+}
+
+.wrapper .paragrafo p{
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  text-align: justify;
+
+  color: #23053A; 
+}
+
+.produtos{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+.produtos .produto-wrapper{
+  width: 32rem;
+
+  border-radius: 2rem;
+
+  position: relative;
+}
+
+.produtos .produto-wrapper img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  transition: transform 200ms ease;
+}
+
+.produtos .produto-wrapper img:hover{
+  transform: scale(1.1);
+}
+
+.produtos .produto-wrapper span{
+  background-color: var(--rose-color);
+
+  font-family: var(--ff-title);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+
+  color: var(--dark-color);
+
+  letter-spacing: 0.05em;
+
+  border-radius: 2rem;
+
+  padding: 0 2.3rem;
+  position: absolute;
+  top: 1.7rem;
+  left: 18.4rem;
+}
+
+@keyframes rotateleft{
+  0%{
+    opacity: 0;
+    transform: translateX(100px) rotate(360deg);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
